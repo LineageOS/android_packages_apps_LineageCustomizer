@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_label">LineageCustomizer</string>
+
+    <string name="partner_row_title">Lineage Apps</string>
+    <string name="apps_row_title">Apps</string>
+    <string name="games_row_title">Games</string>
+    <string name="inputs_row_title">Inputs</string>
+    <string name="settings_row_title">Settings</string>
+
+</resources>
