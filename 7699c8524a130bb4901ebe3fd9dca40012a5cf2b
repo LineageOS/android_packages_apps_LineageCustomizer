@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8875ee3a_2a26ffd4",
+        "filename": "src/org/lineageos/tvcustomizer/ConfigurationProvider.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-06-20T07:57:42Z",
+      "side": 1,
+      "message": "I think this still needs to be checked against null, since that will throw a NPE instead, but I could be wrong\n\nif (out !\u003d null) {\n    try {\n        out.close();\n    } catch (IOException) {\n    }\n}",
+      "parentUuid": "",
+      "revId": "7699c8524a130bb4901ebe3fd9dca40012a5cf2b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be0ef9c0_827b6479",
+        "filename": "src/org/lineageos/tvcustomizer/ConfigurationProvider.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-06-20T07:57:42Z",
+      "side": 1,
+      "message": "I think this came from my patch set, so apologies. we should avoid creating a var here if we don\u0027t use it. see comment above",
+      "revId": "7699c8524a130bb4901ebe3fd9dca40012a5cf2b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
