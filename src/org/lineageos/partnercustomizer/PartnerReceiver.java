@@ -16,17 +16,34 @@
 
 package org.lineageos.partnercustomizer;
 
+import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
+import android.text.TextUtils;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class posts notifications that are used to populate the Partner Row of the Leanback Launcher
@@ -46,11 +63,13 @@ public class PartnerReceiver extends BroadcastReceiver {
     private static final String PARTNER_GROUP = "partner_row_entry";
     private static final String BLACKLIST_PACKAGE = "com.google.android.leanbacklauncher.replacespackage";
 
+    private static final String LIVE_TV_PKG_NAME = "com.google.android.tv";
+
     private Context mContext;
     private NotificationManager mNotifMan;
     private PackageManager mPkgMan;
 
-    // Cutoff value for when the Launcher displays the Partner row as a single
+    // Cutoff value for when the Launcher displayes the Partner row as a single
     // row, or a two row grid. Can be used for correctly positioning the partner
     // app entries.
     private int mRowCutoff = 0;
@@ -70,6 +89,7 @@ public class PartnerReceiver extends BroadcastReceiver {
             postNotification(getPackageName(intent));
         } else if (ACTION_PARTNER_CUSTOMIZATION.equals(action)) {
             mRowCutoff = intent.getIntExtra(EXTRA_ROW_WRAPPING_CUTOFF, 0);
+            postNotification(LIVE_TV_PKG_NAME);
         }
     }
 
@@ -81,6 +101,13 @@ public class PartnerReceiver extends BroadcastReceiver {
         int backupTitleId;
 
         switch (pkgName) {
+            case LIVE_TV_PKG_NAME:
+                sort = 1;
+                resId = R.drawable.ic_tv_banner;
+                backupResId = R.drawable.ic_try_tv_banner;
+                titleId = R.string.live_tv;
+                backupTitleId = R.string.try_live_tv;
+                break;
             default:
                 return;
         }
