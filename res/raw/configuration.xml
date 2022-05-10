@@ -10,6 +10,8 @@
     -->
     <partner-favorite-apps-out-of-box-order>
         <app name="Youtube" package_name="com.google.android.youtube.tv"/>
+        <app name="SmartTube" package_name="com.teamsmart.videomanager.tv"/>
+        <app name="STN Beta" package_name="com.liskovsoft.smarttubetv.beta"/>
         <app name="Google Movies" package_name="com.google.android.videos"/>
     </partner-favorite-apps-out-of-box-order>
 
@@ -21,6 +23,8 @@
     -->
     <partner-all-apps-out-of-box-order>
         <app name="Youtube" package_name="com.google.android.youtube.tv"/>
+        <app name="SmartTube" package_name="com.teamsmart.videomanager.tv"/>
+        <app name="STN Beta" package_name="com.liskovsoft.smarttubetv.beta"/>
         <app name="Google Movies" package_name="com.google.android.videos"/>
         <app name="YouTube Music" package_name="com.google.android.youtube.tvmusic"/>
         <app name="Google PlayStore" package_name="com.android.vending"/>
@@ -48,6 +52,8 @@
     -->
     <partner-channels-out-of-box-order>
         <package-name>com.google.android.youtube.tv</package-name>
+        <package-name>com.teamsmart.videomanager.tv</package-name>
+        <package-name>com.liskovsoft.smarttubetv.beta</package-name>
         <package-name>com.google.android.videos</package-name>
         <package-name>com.google.android.youtube.tvmusic</package-name>
     </partner-channels-out-of-box-order>
@@ -72,6 +78,8 @@
     -->
     <partner-app-channel-quota>
         <app package_name="com.google.android.youtube.tv" quota="8"/>
+        <app package_name="com.teamsmart.videomanager.tv" quota="8"/>
+        <app package_name="com.liskovsoft.smarttubetv.beta" quota="8"/>
         <app package_name="com.google.android.videos" quota="8"/>
         <app package_name="com.google.android.youtube.tvmusic" quota="8"/>
     </partner-app-channel-quota>
