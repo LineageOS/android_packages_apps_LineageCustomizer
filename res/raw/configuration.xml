@@ -9,7 +9,6 @@
     (see: requirements page)
     -->
     <partner-favorite-apps-out-of-box-order>
-        <app name="AppDrawer" package_name="org.lineageos.appdrawer"/>
         <app name="Youtube" package_name="com.google.android.youtube.tv"/>
         <app name="Google Movies" package_name="com.google.android.videos"/>
     </partner-favorite-apps-out-of-box-order>
@@ -23,6 +22,8 @@
     <partner-all-apps-out-of-box-order>
         <app name="Youtube" package_name="com.google.android.youtube.tv"/>
         <app name="Google Movies" package_name="com.google.android.videos"/>
+        <app name="YouTube Music" package_name="com.google.android.youtube.tvmusic"/>
+        <app name="Google PlayStore" package_name="com.android.vending"/>
     </partner-all-apps-out-of-box-order>
 
     <!-- OEMs can customize the initial order of apps in the games row of the Apps
@@ -48,7 +49,7 @@
     <partner-channels-out-of-box-order>
         <package-name>com.google.android.youtube.tv</package-name>
         <package-name>com.google.android.videos</package-name>
-        <package-name>com.google.android.music</package-name>
+        <package-name>com.google.android.youtube.tvmusic</package-name>
     </partner-channels-out-of-box-order>
 
     <!-- Android TV supports a limited set of system notifications. The system
@@ -72,6 +73,6 @@
     <partner-app-channel-quota>
         <app package_name="com.google.android.youtube.tv" quota="8"/>
         <app package_name="com.google.android.videos" quota="8"/>
-        <app package_name="com.google.android.music" quota="8"/>
+        <app package_name="com.google.android.youtube.tvmusic" quota="8"/>
     </partner-app-channel-quota>
 </configuration>
