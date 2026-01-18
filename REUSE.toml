@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+version = 1
+SPDX-PackageName = "LineageCustomizer"
+SPDX-PackageSupplier = "The LineageOS Project"
+SPDX-PackageDownloadLocation = "https://github.com/LineageOS/android_packages_apps_LineageCustomizer"
+
+[[annotations]]
+path = ["res/drawable-xhdpi/ic_launcher.png"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "The LineageOS Project"
+SPDX-License-Identifier = "Apache-2.0"

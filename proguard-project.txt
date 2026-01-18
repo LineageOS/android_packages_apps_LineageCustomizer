@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
 # To enable ProGuard in your project, edit project.properties
 # to define the proguard.config property as described in that file.
 #
