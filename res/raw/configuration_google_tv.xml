@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<configuration>
+    <country value="all">
+        <!-- An empty config is treated as uncached and repeatedly refetched by LauncherX. -->
+        <device-mode value="home" />
+        <notifications-allowed-apps />
+    </country>
+</configuration>
