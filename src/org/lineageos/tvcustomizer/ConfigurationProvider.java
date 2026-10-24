@@ -21,6 +21,7 @@ import java.io.InputStream;
 
 public class ConfigurationProvider extends ContentProvider {
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+    private static final String GTV_LAUNCHER_PACKAGE = "com.google.android.apps.tv.launcherx";
     private static final String TAG = "ConfigurationProvider";
     private static final int TVLAUNCHER_CONFIG = 1;
 
@@ -32,7 +33,10 @@ public class ConfigurationProvider extends ContentProvider {
         InputStream stream;
         Log.d(TAG, "openFile called: " + uri + "  by: " + getCallingPackage());
         if (sUriMatcher.match(uri) == TVLAUNCHER_CONFIG) {
-            stream = getContext().getResources().openRawResource(R.raw.configuration);
+            // Google TV uses country-scoped configuration instead of the Android TV schema
+            int resource = GTV_LAUNCHER_PACKAGE.equals(getCallingPackage())
+                    ? R.raw.configuration_gtv : R.raw.configuration;
+            stream = getContext().getResources().openRawResource(resource);
         } else {
             Log.d(TAG, "Invalid URI");
             throw new UnsupportedOperationException("Unknown uri: " + uri);
